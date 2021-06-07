@@ -23,10 +23,10 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="12sp"
+        android:layout_height="1sp"
         android:layout_marginTop="16sp"
         android:layout_marginBottom="16sp"
-        android:background="#636363" />
+        android:background="#FFFFFF" />
 
     <LinearLayout
         android:layout_width="match_parent"
