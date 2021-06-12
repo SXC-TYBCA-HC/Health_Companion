@@ -17,12 +17,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.project.healthcompanion.ReminderClasses.Reminder_main;
 
 public class HomePage extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     private FirebaseAuth mAuth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,44 +56,23 @@ public class HomePage extends AppCompatActivity {
         }
     }
 
-    public void ClickProfile(View view) {
-        //redirectActivity(this, Profile.class);
-    }
+    public void ClickProfile(View view) { /*redirectActivity(this, Profile.class);*/ }
 
-    public void ClickHome(View view) {
-        closeDrawer(drawerLayout);
-    }
+    public void ClickHome(View view) { closeDrawer(drawerLayout); }
 
+    public void ClickDashboard(View view) { /*redirectActivity(this, Dashboard.class);*/ }
 
-    public void ClickDashboard(View view) {
-        //redirectActivity(this, Dashboard.class);
-    }
+    public void ClickGraphs(View view) { /*redirectActivity(this, Graphs.class);*/ }
 
-    public void ClickGraphs(View view) {
-        //redirectActivity(this, Graphs.class);
-    }
+    public void ClickDietPlans(View view) { /*redirectActivity(this, DietPlans.class);*/ }
 
-    public void ClickDietPlans(View view) {
-        //redirectActivity(this, DietPlans.class);
-    }
+    public void ClickRecipes(View view) { /*redirectActivity(this, Recipes.class);*/ }
 
+    public void ClickReminders(View view) { /*redirectActivity(this, Reminder_main.class);*/ }
 
-    public void ClickRecipes(View view) {
-        //redirectActivity(this, Recipes.class);
-    }
+    public void ClickSocial(View view) { /*redirectActivity(this, Social.class);*/ }
 
-    public void ClickReminders(View view) {
-        redirectActivity(this, Reminders.class);
-    }
-
-    public void ClickSocial(View view) {
-        //redirectActivity(this, Social.class);
-    }
-
-
-    public void ClickLogout(View view) {
-        logout(this);
-    }
+    public void ClickLogout(View view) { logout(this); }
 
     public static void logout(Activity activity) {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
@@ -153,3 +132,4 @@ public class HomePage extends AppCompatActivity {
         }, 2000);
     }
 }
+

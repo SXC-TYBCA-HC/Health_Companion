@@ -12,26 +12,17 @@
         <item>@string/vigorous_activity_lifestyle</item>
     </string-array>
 
+    <!-- headers -->
     <string name="main_header">Health Companion</string>
     <string name="home_text">Home</string>
     <string name="reminder_button">REMINDERS</string>
     <string name="reminder_header">REMINDERS</string>
     <string name="home_header">HOME</string>
+    <string name="diet_plan_header">DIET PLANS</string>
+    <string name="diet_planner_header">DIET PLANNER</string>
 
     <string name="healthcompanion_drawertitle">Health Companion</string>
 
-    <!-- Food reminder strings -->
-    <string name="medication_button">MEDICATION</string>
-    <string name="food_button">FOOD</string>
-    <string name="water_button">WATER</string>
-
-    <string name="medication_msg">MEDICATION</string>
-    <string name="food_msg">FOOD</string>
-    <string name="water_msg">WATER</string>
-
-    <string name="no_food_reminder">You don\'t have any food reminders at the moment</string>
-    <string name="no_medi_reminder">You don\'t have any medication reminders at the moment</string>
-    <string name="no_watr_reminder">You don\'t have any water reminders at the moment</string>
     <string name="profile_navdrawer">Profile</string>
     <string name="home_navdrawer">Home</string>
     <string name="dashboard_navdrawer">Dashboard</string>
@@ -154,6 +145,29 @@
     <string name="edit_profile_picture">Edit Profile Picture</string>
     <string name="no_connection">No connection</string>
     <string name="tap_to_retry">Tap to retry</string>
+
+
+    <!-- diet plans -->
+    <string name="monday"><b><u>Monday</u></b></string>
+    <string name="tuesday"><b><u>Tuesday</u></b></string>
+    <string name="wednesday"><b><u>Wednesday</u></b></string>
+    <string name="thursday"><b><u>Thursday</u></b></string>
+    <string name="friday"><b><u>Friday</u></b></string>
+    <string name="saturday"><b><u>Saturday</u></b></string>
+    <string name="sunday"><b><u>Sunday</u></b></string>
+
+    <string name="monday_mealplan_header">MONDAY</string>
+    <string name="tuesday_mealplan_header">TUESDAY</string>
+    <string name="wednesday_mealplan_header">WEDNESDAY</string>
+    <string name="thursday_mealplan_header">THURSDAY</string>
+    <string name="friday_mealplan_header">FRIDAY</string>
+    <string name="saturday_mealplan_header">SATURDAY</string>
+    <string name="sunday_mealplan_header">SUNDAY</string>
+
+    <string name="breakfast_header"><b><u>BREAKFAST</u></b></string>
+    <string name="lunch_header"><b><u>LUNCH</u></b></string>
+    <string name="dinner_header"><b><u>DINNER</u></b></string>
+    <string name="snacks_header"><b><u>SNACKS</u></b></string>
 
 
 </resources>
