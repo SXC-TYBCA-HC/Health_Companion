@@ -71,6 +71,7 @@ public class Reminder_main extends AppCompatActivity {
         setItemsInRecyclerView();
     }
 
+    //navigation drawer
     public void ClickMenu(View view) { HomePage.openDrawer(drawerLayout); }
 
     public void ClickLogo(View view) { HomePage.closeDrawer(drawerLayout); }
@@ -96,6 +97,7 @@ public class Reminder_main extends AppCompatActivity {
         super.onPause();
         HomePage.closeDrawer(drawerLayout);
     }
+    //end of navigation drawer
 
     public void addReminder() {
         dialog = new Dialog(Reminder_main.this);

@@ -83,43 +83,33 @@ public class DietPlanner extends AppCompatActivity {
         });
     }
 
-    public void ClickMenu(View view) {
-        HomePage.openDrawer(drawerLayout);
-    }
+    //navigation drawer
+    public void ClickMenu(View view) { HomePage.openDrawer(drawerLayout); }
 
-    public void ClickLogo(View view) {
-        HomePage.closeDrawer(drawerLayout);
-    }
+    public void ClickLogo(View view) { HomePage.closeDrawer(drawerLayout); }
 
     public void ClickProfile(View view) { /*HomePage.redirectActivity(this, Profile.class);*/ }
 
-    public void ClickHome(View view) {
-        HomePage.redirectActivity(this, HomePage.class);
-    }
+    public void ClickHome(View view) { HomePage.redirectActivity(this, HomePage.class); }
 
     public void ClickDashboard(View view) { /*HomePage.redirectActivity(this, Dashboard.class);*/ }
 
     public void ClickGraphs(View view) { /*HomePage.redirectActivity(this, WeightProgress.class);*/ }
 
-    public void ClickDietPlans(View view) {
-        HomePage.redirectActivity(this, DietPlans.class);
-    }
+    public void ClickDietPlans(View view) { HomePage.redirectActivity(this, DietPlans.class); }
 
-    public void ClickReminders(View view) {
-        HomePage.redirectActivity(this, Reminder_main.class);
-    }
+    public void ClickReminders(View view) { HomePage.redirectActivity(this, Reminder_main.class); }
 
     public void ClickSocial(View view) { /*HomePage.redirectActivity(this, Social.class);*/ }
 
-    public void ClickLogout(View view) {
-        HomePage.logout(this);
-    }
+    public void ClickLogout(View view) { HomePage.logout(this); }
 
     @Override
     protected void onPause() {
         super.onPause();
         HomePage.closeDrawer(drawerLayout);
     }
+    //end of navigation drawer
 
     public void AddMonday() {
         Intent intent1 = new Intent(this, MondayMealPlan.class);

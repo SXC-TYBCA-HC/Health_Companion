@@ -56,6 +56,7 @@ public class HomePage extends AppCompatActivity {
         }
     }
 
+    //navigation drawer
     public void ClickProfile(View view) { /*redirectActivity(this, Profile.class);*/ }
 
     public void ClickHome(View view) { closeDrawer(drawerLayout); }
@@ -109,6 +110,7 @@ public class HomePage extends AppCompatActivity {
         super.onPause();
         closeDrawer(drawerLayout);
     }
+    //end of navigation drawer
 
     //press back twice to exit
     private boolean backPressedOnce = false;

@@ -38,6 +38,7 @@ public class MondayMealPlan extends AppCompatActivity {
         setChart();
     }
 
+    //navigation drawer
     public void ClickMenu(View view) { HomePage.openDrawer(drawerLayout); }
 
     public void ClickLogo(View view) { HomePage.closeDrawer(drawerLayout); }
@@ -63,6 +64,7 @@ public class MondayMealPlan extends AppCompatActivity {
         super.onPause();
         HomePage.closeDrawer(drawerLayout);
     }
+    //end of navigation drawer
 
     //Piechart
     private void setChart() {

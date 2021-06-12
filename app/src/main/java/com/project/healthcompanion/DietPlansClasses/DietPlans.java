@@ -51,6 +51,7 @@ public class DietPlans extends AppCompatActivity {
         //setItemsInRecyclerView();
     }
 
+    //navigation drawer
     public void ClickMenu(View view) { HomePage.openDrawer(drawerLayout); }
 
     public void ClickLogo(View view) { HomePage.closeDrawer(drawerLayout); }
@@ -76,6 +77,7 @@ public class DietPlans extends AppCompatActivity {
         super.onPause();
         HomePage.closeDrawer(drawerLayout);
     }
+    //end of navigation drawer
 
     //adds diet plans
     public void addDietPlans() {
