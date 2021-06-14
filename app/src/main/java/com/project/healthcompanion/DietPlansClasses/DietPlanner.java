@@ -66,19 +66,19 @@ public class DietPlanner extends AppCompatActivity {
        // empty = findViewById(R.id.deitplan_empty_text);
         //recyclerView = findViewById(R.id.dietplan_RecyclerView);
 
-        add_breakfast.setOnClickListener(new View.OnClickListener() {
+        /*add_breakfast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addBreakfast();
             }
-        });
+        });*/
 
-        dp_confirm.setOnClickListener(new View.OnClickListener() {
+        /*dp_confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ConfirmDietPlan();
             }
-        });
+        });*/
 
         setChart();
     }
@@ -123,7 +123,7 @@ public class DietPlanner extends AppCompatActivity {
         pieChart.addPieSlice(new PieModel("Carbohydrates", Integer.parseInt(carbs.getText().toString()), Color.parseColor("#66BB6A")));
         pieChart.addPieSlice(new PieModel("Fats", Integer.parseInt(fats.getText().toString()), Color.parseColor("#EF5350")));
     }
-
+/*
     public void addBreakfast() {
         dialog = new Dialog(DietPlanner.this);
         dialog.setContentView(R.layout.diet_planner_popup);
@@ -148,7 +148,7 @@ public class DietPlanner extends AppCompatActivity {
                 //req.getFoods(requestQueue, dp_search);
             }
         });
-    }
+    }*/
 
     class Listener implements ResponseListener {
         @Override

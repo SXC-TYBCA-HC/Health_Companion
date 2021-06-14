@@ -45,10 +45,10 @@ public class DietPlans extends AppCompatActivity {
             }
         });
 
-        recyclerView = findViewById(R.id.RecyclerView);
-        recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(DietPlans.this);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        //recyclerView = findViewById(R.id.RecyclerView);
+        //recyclerView.setHasFixedSize(true);
+        //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(DietPlans.this);
+        //recyclerView.setLayoutManager(linearLayoutManager);
         //setItemsInRecyclerView();
     }
 

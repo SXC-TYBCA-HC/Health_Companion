@@ -64,12 +64,16 @@
 
         <TextView
             android:id="@+id/deitplan_empty_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:visibility="visible"
             android:gravity="center"
             android:text="You don't have any reminders at the moment"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/RecyclerView"
+            app:layout_constraintEnd_toEndOf="@id/RecyclerView"
+            app:layout_constraintStart_toStartOf="@id/RecyclerView"
+            app:layout_constraintTop_toTopOf="@id/RecyclerView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
