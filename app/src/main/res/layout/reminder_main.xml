@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_Layout"
-    tools:context=".Reminder_main">
+    tools:context=".ReminderPackage.Reminder_main">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,6 @@
             layout="@layout/main_toolbar"/>
 
         <TextView
-            android:id="@+id/Reminders_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/reminder_header"
@@ -67,7 +66,7 @@
             android:layout_marginTop="83dp"/>
 
         <TextView
-            android:id="@+id/empty_text"
+            android:id="@+id/reminder_empty_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="visible"

@@ -8,12 +8,23 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import com.project.healthcompanion.ReminderPackage.Reminder_main;
+
+import org.eazegraph.lib.charts.PieChart;
+import org.eazegraph.lib.models.PieModel;
 
 public class HomePage extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
+
+    TextView protein, carbs, fats;
+
+    PieChart pieChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +32,16 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         drawerLayout = findViewById(R.id.drawer_Layout);
+
+        protein = findViewById(R.id.Protein);
+        carbs = findViewById(R.id.Carbs);
+        fats = findViewById(R.id.Fats);
+        pieChart = findViewById(R.id.piechart);
+
+        setChart();
     }
+
+    //Drawer Layout
 
     public void ClickMenu(View view) {
         openDrawer(drawerLayout);
@@ -46,14 +66,11 @@ public class HomePage extends AppCompatActivity {
 
     public void ClickDashboard(View view) { redirectActivity(this, Dashboard.class); }
 
-    public void ClickGraphs(View view) { /*redirectActivity(this, Graphs.class);*/ }
+    public void ClickGraphs(View view) { HomePage.redirectActivity(this, Records.class); }
 
-    public void ClickDietPlans(View view) { /*redirectActivity(this, DietPlans.class);*/ }
+    public void ClickDietPlans(View view) { redirectActivity(this, DietPlans.class); }
 
     public void ClickReminders(View view) { redirectActivity(this, Reminder_main.class); }
-
-    public void ClickSocial(View view) { /*redirectActivity(this, Social.class);*/ }
-
 
     public void ClickLogout(View view) { logout(this); }
 
@@ -88,5 +105,18 @@ public class HomePage extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         closeDrawer(drawerLayout);
+    }
+
+    //Piechart
+    private void setChart() {
+        //setting predefined values
+        protein.setText(Integer.toString(120));
+        carbs.setText(Integer.toString(40));
+        fats.setText(Integer.toString(80));
+
+        //creating pie divisions and assigning colours to them
+        pieChart.addPieSlice(new PieModel("Protein", Integer.parseInt(protein.getText().toString()), Color.parseColor("#FFA726")));
+        pieChart.addPieSlice(new PieModel("Carbohydrates", Integer.parseInt(carbs.getText().toString()), Color.parseColor("#66BB6A")));
+        pieChart.addPieSlice(new PieModel("Fats", Integer.parseInt(fats.getText().toString()), Color.parseColor("#EF5350")));
     }
 }

@@ -3,8 +3,13 @@ package com.project.healthcompanion;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.project.healthcompanion.ReminderPackage.Reminder_main;
 
 public class Dashboard extends AppCompatActivity {
 
@@ -32,13 +37,11 @@ public class Dashboard extends AppCompatActivity {
 
     public void ClickDashboard(View view) { HomePage.closeDrawer(drawerLayout); }
 
-    public void ClickGraphs(View view) { /*HomePage.redirectActivity(this, Graphs.class);*/ }
+    public void ClickGraphs(View view) { HomePage.redirectActivity(this, Records.class); }
 
-    public void ClickDietPlans(View view) { /*HomePage.redirectActivity(this, DietPlans.class);*/ }
+    public void ClickDietPlans(View view) { HomePage.redirectActivity(this, DietPlans.class); }
 
     public void ClickReminders(View view) { HomePage.redirectActivity(this, Reminder_main.class); }
-
-    public void ClickSocial(View view) { /*HomePage.redirectActivity(this, Social.class);*/ }
 
     public void ClickLogout(View view) { HomePage.logout(this); }
 

@@ -1,4 +1,4 @@
-package com.project.healthcompanion;
+package com.project.healthcompanion.ReminderPackage;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.project.healthcompanion.ReminderPackage.Reminders;
+import com.project.healthcompanion.R;
 
 import java.util.List;
 

@@ -9,7 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCompanion">
-
+        <activity android:name=".Records"></activity>
+        <activity android:name=".DietPlanner">
+            android:label = "DietPlanner"
+            android:parentActivityName = "DietPlans"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.healthcompanion.DietPlans" />
+        </activity>
+        <activity android:name=".DietPlans">
+            android:label = "DietPlans"
+            android:parentActivityName = "HomePage"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.healthcompanion.HomePage" />
+        </activity>
         <activity android:name=".HomePage">
             android:label = "HomePage"
             android:parentActivityName = "MainActivity"
@@ -17,23 +31,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.healthcompanion.MainActivity" />
         </activity>
-
-        <activity android:name=".Reminder_main">
+        <activity android:name=".ReminderPackage.Reminder_main">
             android:label = "Reminder_main"
             android:parentActivityName = "HomePage"
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.project.healthcompanion.HomePage"/>
+                android:value="com.project.healthcompanion.HomePage" />
         </activity>
-
         <activity android:name=".Dashboard">
             android:label = "Dashboard"
             android:parentActivityName = "HomePage"
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.project.healthcompanion.HomePage"/>
+                android:value="com.project.healthcompanion.HomePage" />
         </activity>
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +52,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".ReminderPackage.NotifierAlarm"/>
+
+        <receiver android:name=".ReminderPackage.NotifierAlarm" />
     </application>
 
 </manifest>

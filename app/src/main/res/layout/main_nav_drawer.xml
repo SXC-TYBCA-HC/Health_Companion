@@ -120,7 +120,7 @@
             android:layout_marginLeft="16sp"
             android:layout_weight="1"
             android:padding="12sp"
-            android:text="@string/graphs_navdrawer"
+            android:text="@string/records_navdrawer"
             android:textColor="#FFFFFF"/>
 
         <ImageView
@@ -155,32 +155,6 @@
             android:layout_marginEnd="48sp"
             android:layout_marginRight="48sp"
             android:src="@drawable/ic_dietplan" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:onClick="ClickRecipes"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0sp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16sp"
-            android:layout_marginLeft="16sp"
-            android:layout_weight="1"
-            android:padding="12sp"
-            android:text="@string/recipes_navdrawer"
-            android:textColor="#FFFFFF"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48sp"
-            android:layout_marginRight="48sp"
-            android:src="@drawable/ic_recipes" />
 
     </LinearLayout>
 

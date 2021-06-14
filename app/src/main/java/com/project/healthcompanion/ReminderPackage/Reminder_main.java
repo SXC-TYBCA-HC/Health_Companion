@@ -1,4 +1,4 @@
-package com.project.healthcompanion;
+package com.project.healthcompanion.ReminderPackage;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -24,10 +24,11 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.project.healthcompanion.ReminderPackage.NotifierAlarm;
-import com.project.healthcompanion.ReminderPackage.Reminder_database;
-import com.project.healthcompanion.ReminderPackage.Reminders;
-import com.project.healthcompanion.ReminderPackage.RoomDAO;
+import com.project.healthcompanion.Dashboard;
+import com.project.healthcompanion.DietPlans;
+import com.project.healthcompanion.HomePage;
+import com.project.healthcompanion.R;
+import com.project.healthcompanion.Records;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -57,7 +58,7 @@ public class Reminder_main extends AppCompatActivity {
         reminder_database = Reminder_database.getAppDatabase(Reminder_main.this);
 
         add = findViewById(R.id.AddButton);
-        empty = findViewById(R.id.empty_text);
+        empty = findViewById(R.id.reminder_empty_text);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,13 +84,11 @@ public class Reminder_main extends AppCompatActivity {
 
     public void ClickDashboard(View view) { HomePage.redirectActivity(this, Dashboard.class); }
 
-    public void ClickGraphs (View view) { /*HomePage.redirectActivity(this, Graphs.class);*/ }
+    public void ClickGraphs(View view) { HomePage.redirectActivity(this, Records.class); }
 
-    public void ClickDietPlans(View view) { /*HomePage.redirectActivity(this, DietPlans.class);*/ }
+    public void ClickDietPlans(View view) { HomePage.redirectActivity(this, DietPlans.class); }
 
     public void ClickReminders(View view) { HomePage.closeDrawer(drawerLayout);}
-
-    public void ClickSocial(View view) { /*HomePage.redirectActivity(this, Social.class);*/ }
 
     public void ClickLogout(View view) { HomePage.logout(this); }
 

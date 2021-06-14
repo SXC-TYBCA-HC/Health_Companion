@@ -1,38 +1,66 @@
 <resources>
     <string name="app_name">Health Companion</string>
     <string name="main_header">Health Companion</string>
-    <string name="home_text">HOME</string>
-    <string name="reminder_button">REMINDERS</string>
+
+    <!-- headers -->
     <string name="reminder_header">REMINDERS</string>
     <string name="home_header">HOME</string>
     <string name="dashbaord_header">DASHBAORD</string>
+    <string name="social_header">SOCIAL</string>
+    <string name="weight_progress_header">WEIGHT PROGRESS</string>
+    <string name="diet_plan_header">DIET PLANS</string>
+    <string name="diet_planner_header">DIET PLANNER</string>
+    <string name="records_header">RECORDS</string>
 
+    <!-- nav drawer strings -->
     <string name="healthcompanion_drawertitle">Health Companion</string>
 
-    <!-- Food reminder strings -->
-    <string name="medication_button">MEDICATION</string>
-    <string name="food_button">FOOD</string>
-    <string name="water_button">WATER</string>
-
-    <string name="medication_msg">MEDICATION</string>
-    <string name="food_msg">FOOD</string>
-    <string name="water_msg">WATER</string>
-
-    <string name="no_food_reminder">You don\'t have any food reminders at the moment</string>
-    <string name="no_medi_reminder">You don\'t have any medication reminders at the moment</string>
-    <string name="no_watr_reminder">You don\'t have any water reminders at the moment</string>
     <string name="profile_navdrawer">Profile</string>
     <string name="home_navdrawer">Home</string>
     <string name="dashboard_navdrawer">Dashboard</string>
-    <string name="graphs_navdrawer">Overview/Graphs</string>
+    <string name="records_navdrawer">Weight Records</string>
     <string name="dietplans_navdrawer">Diet Plans</string>
     <string name="recipes_navdrawer">Recipes</string>
     <string name="reminders_navdrawer">Reminders</string>
     <string name="social_navdrawer">Social</string>
     <string name="logout_navdrawer">Logout</string>
-    <string name="dashboard_dietplan">Diet Plan: </string>
-    <string name="dashboard_plannedcalorie">Planned Calorie Consumption:</string>
-    <string name="dashboard_calorieconsumed">Calories Consumed:</string>
 
+    <!-- home -->
+    <string name="home_dietplan">Diet Plan followed: </string>
+    <string name="home_daily_calories">Daily calories:</string>
+
+    <!-- dietplans -->
+    <string name="monday"><b><u>Monday</u></b></string>
+    <string name="tuesday"><b><u>Tuesday</u></b></string>
+    <string name="wednesday"><b><u>Wednesday</u></b></string>
+    <string name="thursday"><b><u>Thursday</u></b></string>
+    <string name="friday"><b><u>Friday</u></b></string>
+    <string name="saturday"><b><u>Saturday</u></b></string>
+    <string name="sunday"><b><u>Sunday</u></b></string>
+
+    <string name="monday_mealplan_header">MONDAY</string>
+    <string name="tuesday_mealplan_header">TUESDAY</string>
+    <string name="wednesday_mealplan_header">WEDNESDAY</string>
+    <string name="thursday_mealplan_header">THURSDAY</string>
+    <string name="friday_mealplan_header">FRIDAY</string>
+    <string name="saturday_mealplan_header">SATURDAY</string>
+    <string name="sunday_mealplan_header">SUNDAY</string>
+
+    <string name="breakfast_header"><b><u>BREAKFAST</u></b></string>
+    <string name="lunch_header"><b><u>LUNCH</u></b></string>
+    <string name="dinner_header"><b><u>DINNER</u></b></string>
+    <string name="snacks_header"><b><u>SNACKS</u></b></string>
+
+
+    <!-- hints -->
+    <string name="dpspinner">Select a duration</string>
+
+
+    <string-array name="dpduration">
+        <item>1 Week</item>
+        <item>2 Weeks</item>
+        <item>3 Weeks</item>
+        <item>4 Weeks</item>
+    </string-array>
 
 </resources>

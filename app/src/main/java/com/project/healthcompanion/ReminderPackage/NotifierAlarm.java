@@ -17,7 +17,6 @@ import androidx.core.app.NotificationCompat;
 
 import com.project.healthcompanion.MainActivity;
 import com.project.healthcompanion.R;
-import com.project.healthcompanion.Reminder_main;
 
 public class NotifierAlarm extends BroadcastReceiver {
     private Reminder_database reminder_database;
@@ -39,7 +38,7 @@ public class NotifierAlarm extends BroadcastReceiver {
         intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
         TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(context);
-        taskStackBuilder.addParentStack(MainActivity.class);
+        taskStackBuilder.addParentStack(Reminder_main.class);
         taskStackBuilder.addNextIntent(intent1);
 
         PendingIntent intent2 = taskStackBuilder.getPendingIntent(1, PendingIntent.FLAG_UPDATE_CURRENT);
