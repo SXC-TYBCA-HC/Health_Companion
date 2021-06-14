@@ -63,84 +63,132 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:text="Average Calorie Consumption:"/>
+                android:text="Calories:"/>
 
             <TextView
                 android:id="@+id/avg_cal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="135dp"
+                android:layout_marginLeft="280dp"
                 android:textSize="15dp"
                 android:text="0"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="68dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="Proteins:"/>
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/piechart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp" />
 
-            <TextView
-                android:id="@+id/avg_prot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="221dp"
-                android:textSize="15dp"
-                android:text="0"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="68dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Pro"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="Carbohydrates:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Protein"
+                        android:paddingLeft="10dp"/>
 
-            <TextView
-                android:id="@+id/avg_carb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="179dp"
-                android:textSize="15dp"
-                android:text="0"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/Protein"
+                        android:layout_marginLeft="65dp"
+                        android:textColor="@color/num_col"
+                        android:textStyle="bold"
+                        android:layout_alignParentRight="true"/>
 
-        </LinearLayout>
+                </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="68dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="Fats:"/>
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Carb"/>
 
-            <TextView
-                android:id="@+id/avg_fats"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="248dp"
-                android:textSize="15dp"
-                android:text="0"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carbohydrates"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/Carbs"
+                        android:textColor="@color/num_col"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="18dp"
+                        android:layout_alignParentRight="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Fat"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fats"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/Fats"
+                        android:textColor="@color/num_col"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="83dp"
+                        android:layout_alignParentRight="true"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -170,13 +218,13 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
-                        android:id="@+id/monday"
+                        android:id="@+id/breakfast"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:text="@string/monday"
+                        android:text="@string/breakfast_header"
                         android:textSize="15dp"/>
 
                     <View
@@ -185,11 +233,50 @@
                         android:layout_marginTop="5dp"
                         android:background="#FFFFFF" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Food Items"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Calories"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Protein"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Carbs"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fats"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                     <Button
-                        android:id="@+id/add_monday"
+                        android:id="@+id/add_breakfast"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="295dp"
+                        android:layout_marginLeft="280dp"
                         android:text="Edit"
                         android:textColor="#0099FF"
                         app:backgroundTint="#FFFFFF" />
@@ -207,13 +294,13 @@
                     android:layout_margin="10dp">
 
                     <TextView
-                        android:id="@+id/tuesday"
+                        android:id="@+id/lunch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:text="@string/tuesday"
+                        android:text="@string/lunch_header"
                         android:textSize="15dp"/>
 
                     <View
@@ -223,10 +310,10 @@
                         android:background="#FFFFFF" />
 
                     <Button
-                        android:id="@+id/add_tuesday"
+                        android:id="@+id/add_lunch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="295dp"
+                        android:layout_marginLeft="280dp"
                         android:text="Edit"
                         android:textColor="#0099FF"
                         app:backgroundTint="#FFFFFF" />
@@ -244,13 +331,13 @@
                     android:layout_margin="10dp">
 
                     <TextView
-                        android:id="@+id/wendesday"
+                        android:id="@+id/dinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:text="@string/wednesday"
+                        android:text="@string/dinner_header"
                         android:textSize="15dp"/>
 
                     <View
@@ -260,10 +347,10 @@
                         android:background="#FFFFFF" />
 
                     <Button
-                        android:id="@+id/add_wendesday"
+                        android:id="@+id/add_dinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="295dp"
+                        android:layout_marginLeft="280dp"
                         android:text="Edit"
                         android:textColor="#0099FF"
                         app:backgroundTint="#FFFFFF" />
@@ -281,13 +368,13 @@
                     android:layout_margin="10dp">
 
                     <TextView
-                        android:id="@+id/thursday"
+                        android:id="@+id/snacks"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="#FFFFFF"
-                        android:text="@string/thursday"
+                        android:text="@string/snacks_header"
                         android:textSize="15dp"/>
 
                     <View
@@ -297,10 +384,10 @@
                         android:background="#FFFFFF" />
 
                     <Button
-                        android:id="@+id/add_thursday"
+                        android:id="@+id/add_snacks"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="295dp"
+                        android:layout_marginLeft="280dp"
                         android:text="Edit"
                         android:textColor="#0099FF"
                         app:backgroundTint="#FFFFFF" />
@@ -309,134 +396,23 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#0099FF"
-                    android:orientation="vertical"
-                    android:padding="15dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_margin="10dp">
-
-                    <TextView
-                        android:id="@+id/friday"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textColor="#FFFFFF"
-                        android:text="@string/friday"
-                        android:textSize="15dp"/>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1sp"
-                        android:layout_marginTop="5dp"
-                        android:background="#FFFFFF" />
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/add_friday"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="295dp"
-                        android:text="Edit"
-                        android:textColor="#0099FF"
-                        app:backgroundTint="#FFFFFF" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#0099FF"
-                    android:orientation="vertical"
-                    android:padding="15dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_margin="10dp">
-
-                    <TextView
-                        android:id="@+id/saturday"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textColor="#FFFFFF"
-                        android:text="@string/saturday"
-                        android:textSize="15dp"/>
-
-                    <View
+                        android:id="@+id/dp_confirm"
                         android:layout_width="match_parent"
-                        android:layout_height="1sp"
-                        android:layout_marginTop="5dp"
-                        android:background="#FFFFFF" />
-
-                    <Button
-                        android:id="@+id/add_saturday"
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="295dp"
-                        android:text="Edit"
-                        android:textColor="#0099FF"
-                        app:backgroundTint="#FFFFFF" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#0099FF"
-                    android:orientation="vertical"
-                    android:padding="15dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_margin="10dp">
-
-                    <TextView
-                        android:id="@+id/sunday"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textColor="#FFFFFF"
-                        android:text="@string/sunday"
-                        android:textSize="15dp"/>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1sp"
-                        android:layout_marginTop="5dp"
-                        android:background="#FFFFFF" />
-
-                    <Button
-                        android:id="@+id/add_sunday"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="295dp"
-                        android:text="Edit"
-                        android:textColor="#0099FF"
-                        app:backgroundTint="#FFFFFF" />
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="#0099FF"
+                        android:text="CONFIRM"/>
 
                 </LinearLayout>
 
             </LinearLayout>
 
         </ScrollView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/dp_confirm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:backgroundTint="#0099FF"
-                android:text="CONFIRM"/>
-
-        </LinearLayout>
 
     </LinearLayout>
 

@@ -20,13 +20,14 @@
     <string name="home_header">HOME</string>
     <string name="diet_plan_header">DIET PLANS</string>
     <string name="diet_planner_header">DIET PLANNER</string>
+    <string name="records_header">RECORDS</string>
 
     <string name="healthcompanion_drawertitle">Health Companion</string>
 
     <string name="profile_navdrawer">Profile</string>
     <string name="home_navdrawer">Home</string>
     <string name="dashboard_navdrawer">Dashboard</string>
-    <string name="graphs_navdrawer">Overview/Graphs</string>
+    <string name="records_navdrawer">Weight Records</string>
     <string name="dietplans_navdrawer">Diet Plans</string>
     <string name="recipes_navdrawer">Recipes</string>
     <string name="reminders_navdrawer">Reminders</string>

@@ -54,7 +54,7 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RecyclerView"
+            android:id="@+id/dietplan_RecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible"
@@ -65,17 +65,11 @@
         <TextView
             android:id="@+id/deitplan_empty_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="You don't have any diet plans at the moment"
-            android:textSize="20dp"
+            android:layout_height="match_parent"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@id/RecyclerView"
-            app:layout_constraintEnd_toEndOf="@id/RecyclerView"
-            app:layout_constraintStart_toStartOf="@id/RecyclerView"
-            app:layout_constraintTop_toTopOf="@id/RecyclerView"/>
+            android:gravity="center"
+            android:text="You don't have any reminders at the moment"
+            android:textSize="20dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

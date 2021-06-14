@@ -6,54 +6,37 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HealthCompanion"
-        android:requestLegacyExternalStorage="true">
+        android:theme="@style/Theme.HealthCompanion">
+        <activity android:name=".Records">
 
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
-
+        <activity android:name=".MainActivity"></activity>
 
         <activity android:name=".ImgPickerActivity" />
 
-
-        <activity android:name=".GetUserInfo">
-
-        </activity>
-
+        <activity android:name=".GetUserInfo"></activity>
 
         <activity
             android:name=".LoginNSignUpActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:windowSoftInputMode="stateAlwaysVisible" />
-
-        <activity android:name=".DietPlansClasses.MondayMealPlan">
-            android:label = "MondayMealPlan"
-            android:parentActivityName = "DietPlanner"
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.project.healthcompanion.DietPlansClasses.DietPlanner" />
-        </activity>
-
         <activity android:name=".DietPlansClasses.DietPlanner">
             android:label = "DietPlanner"
             android:parentActivityName = "DietPlans"
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.healthcompanion.DietPlansClasses.DietPlans" />
+
         </activity>
 
         <activity android:name=".DietPlansClasses.DietPlans">
@@ -62,14 +45,18 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.healthcompanion.HomePage" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
+        <activity android:name=".ReminderClasses.Reminder_main"></activity>
 
         <activity
             android:name=".HomePage"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
-
-
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"></activity>
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
@@ -84,8 +71,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <receiver android:name=".ReminderClasses.NotifierAlarm" />
     </application>
 
 </manifest>
-
-

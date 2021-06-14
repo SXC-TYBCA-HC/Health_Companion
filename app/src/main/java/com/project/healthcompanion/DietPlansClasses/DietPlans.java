@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.healthcompanion.HomePage;
 import com.project.healthcompanion.R;
+import com.project.healthcompanion.Records;
 import com.project.healthcompanion.ReminderClasses.Reminder_main;
 
 import java.util.List;
@@ -51,33 +52,43 @@ public class DietPlans extends AppCompatActivity {
         //setItemsInRecyclerView();
     }
 
-    //navigation drawer
-    public void ClickMenu(View view) { HomePage.openDrawer(drawerLayout); }
+    public void ClickMenu(View view) {
+        HomePage.openDrawer(drawerLayout);
+    }
 
-    public void ClickLogo(View view) { HomePage.closeDrawer(drawerLayout); }
+    public void ClickLogo(View view) {
+        HomePage.closeDrawer(drawerLayout);
+    }
 
     public void ClickProfile(View view) { /*HomePage.redirectActivity(this, Profile.class);*/ }
 
-    public void ClickHome(View view) { HomePage.redirectActivity(this, HomePage.class); }
+    public void ClickHome(View view) {
+        HomePage.redirectActivity(this, HomePage.class);
+    }
 
     public void ClickDashboard(View view) { /*HomePage.redirectActivity(this, Dashboard.class);*/ }
 
-    public void ClickGraphs(View view) { /*HomePage.redirectActivity(this, WeightProgress.class);*/ }
+    public void ClickGraphs(View view) {
+        HomePage.redirectActivity(this, Records.class);
+    }
 
-    public void ClickDietPlans(View view) { HomePage.closeDrawer(drawerLayout); }
+    public void ClickDietPlans(View view) {
+        HomePage.closeDrawer(drawerLayout);
+    }
 
-    public void ClickReminders(View view) { HomePage.redirectActivity(this, Reminder_main.class);}
+    public void ClickReminders(View view) {
+        HomePage.redirectActivity(this, Reminder_main.class);
+    }
 
-    public void ClickSocial(View view) { /*HomePage.redirectActivity(this, Social.class);*/ }
-
-    public void ClickLogout(View view) { HomePage.logout(this); }
+    public void ClickLogout(View view) {
+        HomePage.logout(this);
+    }
 
     @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         HomePage.closeDrawer(drawerLayout);
     }
-    //end of navigation drawer
 
     //adds diet plans
     public void addDietPlans() {
@@ -85,7 +96,7 @@ public class DietPlans extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //checks of there is a diet plan or not. if there is a diet plan, it makes the dietplan_empty_text invisible
+//checks of there is a diet plan or not. if there is a diet plan, it makes the dietplan_empty_text invisible
     /*
     public void setItemsInRecyclerView() {
         if(temp.size > 0) {
