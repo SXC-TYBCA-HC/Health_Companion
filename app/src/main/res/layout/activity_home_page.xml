@@ -29,7 +29,7 @@
             app:layout_constraintVertical_bias="0.023"
             android:gravity="center"
             android:textColor="#FFFFFF"
-            android:background="#0099FF"
+            android:background="#FF9C27B0"
             android:layout_marginTop="0sp"/>
 
         <TextView

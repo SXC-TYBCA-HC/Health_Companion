@@ -336,7 +336,7 @@
     </array>
 
     <!-- diet plan colors -->
-    <color name="num_col">#0099FF</color>
+    <color name="num_col">#FF9C27B0</color>
     <color name="Pro">#ff0000</color>
     <color name="Carb">#e89923</color>
     <color name="Fat">#fff700</color>

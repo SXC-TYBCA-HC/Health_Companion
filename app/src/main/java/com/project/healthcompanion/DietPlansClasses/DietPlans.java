@@ -52,6 +52,7 @@ public class DietPlans extends AppCompatActivity {
         //setItemsInRecyclerView();
     }
 
+    //navigation drawer
     public void ClickMenu(View view) {
         HomePage.openDrawer(drawerLayout);
     }
@@ -68,7 +69,7 @@ public class DietPlans extends AppCompatActivity {
 
     public void ClickDashboard(View view) { /*HomePage.redirectActivity(this, Dashboard.class);*/ }
 
-    public void ClickGraphs(View view) {
+    public void ClickRecords(View view) {
         HomePage.redirectActivity(this, Records.class);
     }
 
@@ -89,6 +90,7 @@ public class DietPlans extends AppCompatActivity {
         super.onPause();
         HomePage.closeDrawer(drawerLayout);
     }
+    //end of navigation drawer
 
     //adds diet plans
     public void addDietPlans() {

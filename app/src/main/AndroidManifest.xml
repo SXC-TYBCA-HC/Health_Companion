@@ -16,26 +16,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCompanion">
-        <activity android:name=".Records">
+
+
+        <activity android:name=".Dashboard">
 
 
         </activity>
-        <activity android:name=".MainActivity"></activity>
 
+
+        <activity android:name=".Records">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".MainActivity">
+
+        </activity>
         <activity android:name=".ImgPickerActivity" />
+        <activity android:name=".GetUserInfo">
 
-        <activity android:name=".GetUserInfo"></activity>
 
+
+        </activity>
         <activity
             android:name=".LoginNSignUpActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:windowSoftInputMode="stateAlwaysVisible" />
+
         <activity android:name=".DietPlansClasses.DietPlanner">
             android:label = "DietPlanner"
             android:parentActivityName = "DietPlans"
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.healthcompanion.DietPlansClasses.DietPlans" />
+
 
         </activity>
 
@@ -45,18 +63,18 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.healthcompanion.HomePage" />
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
-        <activity android:name=".ReminderClasses.Reminder_main"></activity>
+        <activity android:name=".ReminderClasses.Reminder_main">
+
+        </activity>
 
         <activity
             android:name=".HomePage"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"></activity>
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/drawer_Layout"
+    tools:context=".Records">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +29,7 @@
             app:layout_constraintVertical_bias="0.023"
             android:gravity="center"
             android:textColor="#FFFFFF"
-            android:background="#0099FF"
+            android:background="#FF9C27B0"
             android:layout_marginTop="0sp"/>
 
     </LinearLayout>
@@ -41,7 +42,7 @@
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/lineChart"
             android:layout_width="match_parent"
-            android:layout_height="495dp"
+            android:layout_height="375dp"
             android:layout_marginTop="83dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +52,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1sp"
-            android:background="#0099FF" />
+            android:background="#FF9C27B0" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,15 +72,41 @@
                     android:gravity="center"
                     android:text="Current Weight"/>
 
-                <TextView
-                    android:id="@+id/home_current_weight"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:textSize="40dp"
-                    android:gravity="center"
-                    android:text="65KG"/>
+                    android:layout_height="1sp"
+                    android:background="#FF9C27B0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/records_current_weight_disp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textSize="40dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textSize="40dp"
+                        android:gravity="center"
+                        android:layout_weight="2"
+                        android:text="KG"/>
+
+                </LinearLayout>
 
             </LinearLayout>
+
+            <View
+                android:layout_width="1sp"
+                android:layout_height="match_parent"
+                android:background="#FF9C27B0" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -94,18 +121,121 @@
                     android:gravity="center"
                     android:text="Goal Weight"/>
 
-                <TextView
-                    android:id="@+id/home_goal_weight"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:textSize="40dp"
-                    android:gravity="center"
-                    android:text="60KG"/>
+                    android:layout_height="1sp"
+                    android:background="#FF9C27B0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/home_goal_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textSize="40dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="60"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textSize="40dp"
+                        android:gravity="center"
+                        android:layout_weight="2"
+                        android:text="KG"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#FF9C27B0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="Current weight:"/>
+
+                <EditText
+                    android:id="@+id/records_current_weight"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="13dp"/>
+
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="Entry number:"/>
+
+
+                <EditText
+                    android:id="@+id/entry_no"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginTop="13dp"/>
+
+            </LinearLayout> -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/add_records"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Add Entry"/>
 
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300sp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+
+    </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -80,8 +80,6 @@ public class Reminder_main extends AppCompatActivity {
 
     public void ClickProfile(View view) { /*HomePage.redirectActivity(this, Profile.class);*/ }
 
-    public void ClickHome(View view) { HomePage.redirectActivity(this, HomePage.class); }
-
     public void ClickDashboard(View view) { /*HomePage.redirectActivity(this, Dashboard.class);*/ }
 
     public void ClickRecords(View view) { HomePage.redirectActivity(this, Records.class); }
@@ -89,8 +87,6 @@ public class Reminder_main extends AppCompatActivity {
     public void ClickDietPlans(View view) { HomePage.redirectActivity(this, DietPlans.class); }
 
     public void ClickReminders(View view) { HomePage.closeDrawer(drawerLayout);}
-
-    public void ClickSocial(View view) { /*HomePage.redirectActivity(this, Social.class);*/ }
 
     public void ClickLogout(View view) { HomePage.logout(this); }
 

@@ -22,23 +22,155 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#0099FF"
+                android:background="#FF9C27B0"
                 android:orientation="vertical"
                 android:padding="15dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dp_item_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:text="Maintenance 1"/>
+
+                    <Button
+                        android:id="@+id/add_breakfast"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="X"
+                        android:textColor="#FF0000"
+                        app:backgroundTint="#FFFFFF" />
+
+                </LinearLayout>
+
                 <TextView
-                    android:id="@+id/dp_item_header"
+                    android:id="@+id/breakfast"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="5dp"
                     android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:text="deitplan_name"/>
+                    android:text="@string/breakfast_header"
+                    android:textSize="15dp"/>
 
-                <LinearLayout
+                <!-- >TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CornFlakes 56g"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Low Fat Milk 200g"
+                    android:textColor="#FFFFFF" /> -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="5dp"
+                    android:background="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/lunch_header"
+                    android:textSize="15dp"/>
+
+                <!-- <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chicken Breast 100g"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Broccoli 50g"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Carrots 50g"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Slice Bread"
+                    android:textColor="#FFFFFF" /> -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="5dp"
+                    android:background="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/dinner_header"
+                    android:textSize="15dp"/>
+
+                <!-- <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rice 100g"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Potatoes 50g"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Beetroots 50g"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Carrots 50g"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Peas 50g"
+                    android:textColor="#FFFFFF" /> -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="5dp"
+                    android:background="#FFFFFF" />
+                <TextView
+                    android:id="@+id/snacks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/snacks_header"
+                    android:textSize="15dp"/>
+
+                <!-- <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -65,9 +197,9 @@
                         android:textColor="#FFFFFF"
                         android:text="cal."/>
 
-                </LinearLayout>
+                </LinearLayout> -->
 
-                <LinearLayout
+                <!-- <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -94,9 +226,9 @@
                         android:textColor="#FFFFFF"
                         android:text="g"/>
 
-                </LinearLayout>
+                </LinearLayout> -->
 
-                <LinearLayout
+                <!-- <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -123,9 +255,9 @@
                         android:textColor="#FFFFFF"
                         android:text="g"/>
 
-                </LinearLayout>
+                </LinearLayout> -->
 
-                <LinearLayout
+                <!-- <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -152,7 +284,8 @@
                         android:textColor="#FFFFFF"
                         android:text="g"/>
 
-                </LinearLayout>
+                </LinearLayout> -->
+
 
             </LinearLayout>
 

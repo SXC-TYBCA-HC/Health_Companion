@@ -1,4 +1,3 @@
-
 package com.project.healthcompanion;
 
 import android.Manifest;
@@ -31,6 +30,7 @@ import androidx.navigation.Navigation;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -45,11 +45,67 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+//jonny's imports
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.WorkerThread;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.Tasks;
+import com.google.firebase.Timestamp;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentChange.Type;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldPath;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.firestore.ListenerRegistration;
+import com.google.firebase.firestore.MetadataChanges;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.Query.Direction;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.ServerTimestamp;
+import com.google.firebase.firestore.SetOptions;
+import com.google.firebase.firestore.Source;
+import com.google.firebase.firestore.Transaction;
+import com.google.firebase.firestore.WriteBatch;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Executor;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+//end of jonny's imports
+
+
 public class Personal_Info extends Fragment {
     private FragmentPersonalInfoBinding binding;
     private Date dateOfBirth;
     final Calendar DOB_Calendar = Calendar.getInstance();
     private String gender;
+
+    //jonny's variable
+    FirebaseFirestore db;
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -162,10 +218,10 @@ public class Personal_Info extends Fragment {
         binding.buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!checkAllfields()) {
+                if (!checkAllFields()) {
                     return;
                 }
-                //saveToDB();
+                saveToDB();
                 NavDirections action = Personal_InfoDirections.actionPersonalInfoToPhysiqueInfoFragment();
                 Navigation.findNavController(view).navigate(action);
             }
@@ -196,20 +252,21 @@ public class Personal_Info extends Fragment {
                 .setColorFilter(ContextCompat.getColor(requireContext(), R.color.grey_300));
     }
 
-    private boolean checkAllfields() {
+    private boolean checkAllFields() {
+        boolean flag = true;
         if (!Validate.ValidateField(binding.editTextFirstName)
                 || !Validate.ValidateField(binding.editTextLastName)) {
-            return false;
+            flag = false;
         }
         if (dateOfBirth == null) {
             binding.editTextDOB.setError("This field is required");
-            return false;
+            flag = false;
         }
         if (gender == null) {
             Snackbar.make(requireView(), "Select Gender", Snackbar.LENGTH_SHORT).show();
-            return false;
+            flag = false;
         }
-        return true;
+        return flag;
     }
 
 
@@ -287,7 +344,60 @@ public class Personal_Info extends Fragment {
         //synatx to get values:   Data_type value = binding.editText___{1}___.getText().toString();
         // {1}->Name of the edit field
         //store DoB directly from dateOfBirth variable
+
+        //create user's profile doc:
+        String currentUser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        Log.d("myTag",currentUser);
+
+        String firstName = binding.editTextFirstName.getText().toString();
+        String lastName = binding.editTextLastName.getText().toString();
+        String userGender = gender;
+        Date userDOB = dateOfBirth;
+
+        Map<String, Object> profileData = new HashMap<>();
+        profileData.put("First name", firstName);
+        profileData.put("Last name", lastName);
+        profileData.put("gender", userGender);
+        profileData.put("DOB", userDOB);
+
+        db.collection("profiles").document(currentUser)
+                .set(profileData)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "DocumentSnapshot successfully written!");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error writing document", e);
+                    }
+                });
+
+
+
+        //get document reference.
+        //DocumentReference userProfileRef = db.collection("profiles").document(currentUser);
+
+        //check if document exists.
+        /*userProfileRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document != null) {
+                        //doc exists
+                        //Log.i("LOGGER","First "+document.getString("first"));
+                        //Log.i("LOGGER","Last "+document.getString("last"));
+                        //Log.i("LOGGER","Born "+document.getString("born"));
+                    } else {
+                        Log.d("LOGGER", "No such document");
+                    }
+                } else {
+                    Log.d("LOGGER", "get failed with ", task.getException());
+                }
+            }
+        });*/
     }
-
-
 }

@@ -16,14 +16,13 @@
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittext_bg"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingEnd="20dp"
 
+        android:paddingEnd="20dp"
         android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,12 +39,11 @@
         android:background="@drawable/edittext_bg"
 
         android:ems="10"
-
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="20dp"
-        android:paddingTop="10dp"
 
+        android:paddingTop="10dp"
         android:paddingEnd="20dp"
         android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"

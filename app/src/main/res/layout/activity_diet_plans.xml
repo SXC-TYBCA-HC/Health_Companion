@@ -33,7 +33,7 @@
                 app:layout_constraintVertical_bias="0.023"
                 android:gravity="center"
                 android:textColor="#FFFFFF"
-                android:background="#0099FF"
+                android:background="#FF9C27B0"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:layout_marginTop="0sp"/>
@@ -42,7 +42,7 @@
                 android:id="@+id/add_dietplan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#0099FF"
+                android:background="#FF9C27B0"
                 android:src="@drawable/ic_add_dp"/>
 
         </LinearLayout>
@@ -64,11 +64,11 @@
 
         <TextView
             android:id="@+id/deitplan_empty_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:visibility="visible"
             android:gravity="center"
-            android:text="You don't have any reminders at the moment"
+            android:text="You don't have any diet plans at the moment"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="@id/RecyclerView"
             app:layout_constraintEnd_toEndOf="@id/RecyclerView"

@@ -60,8 +60,6 @@ public class HomePage extends AppCompatActivity {
     //navigation drawer
     public void ClickProfile(View view) { /*redirectActivity(this, Profile.class);*/ }
 
-    public void ClickHome(View view) { closeDrawer(drawerLayout); }
-
     public void ClickDashboard(View view) { /*redirectActivity(this, Dashboard.class);*/ }
 
     public void ClickRecords(View view) { redirectActivity(this, Records.class); }
@@ -69,8 +67,6 @@ public class HomePage extends AppCompatActivity {
     public void ClickDietPlans(View view) { redirectActivity(this, DietPlans.class); }
 
     public void ClickReminders(View view) { redirectActivity(this, Reminder_main.class); }
-
-    public void ClickSocial(View view) { /*redirectActivity(this, Social.class);*/ }
 
     public void ClickLogout(View view) { logout(this); }
 

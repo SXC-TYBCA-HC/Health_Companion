@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099FF"
+    android:background="#FF9C27B0"
     android:orientation="vertical">
 
     <ImageView
@@ -51,32 +51,6 @@
             android:layout_marginEnd="48sp"
             android:layout_marginRight="48sp"
             android:src="@drawable/ic_profile" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:onClick="ClickHome"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0sp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16sp"
-            android:layout_marginLeft="16sp"
-            android:layout_weight="1"
-            android:padding="12sp"
-            android:text="@string/home_navdrawer"
-            android:textColor="#FFFFFF"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48sp"
-            android:layout_marginRight="48sp"
-            android:src="@drawable/ic_home" />
 
     </LinearLayout>
 
@@ -181,32 +155,6 @@
             android:layout_marginEnd="48sp"
             android:layout_marginRight="48sp"
             android:src="@drawable/ic_reminders" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:onClick="ClickSocial"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0sp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16sp"
-            android:layout_marginLeft="16sp"
-            android:layout_weight="1"
-            android:padding="12sp"
-            android:text="@string/social_navdrawer"
-            android:textColor="#FFFFFF"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48sp"
-            android:layout_marginRight="48sp"
-            android:src="@drawable/ic_social" />
 
     </LinearLayout>
 
